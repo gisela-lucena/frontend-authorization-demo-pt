@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Ducks from "./Ducks";
 import Login from "./Login";
 import MyProfile from "./MyProfile";
@@ -24,6 +24,16 @@ function App() {
           <div className="registerContainer">
             <Register />
           </div>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          isLoggedIn ? (
+            <Navigate to="/ducks" replace />
+          ) : (
+            <Navigate to="/login" replace />
+          )
         }
       />
     </Routes>
