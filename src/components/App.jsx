@@ -93,6 +93,16 @@ function App() {
           )
         }
       />
+      <Route
+        path="*"
+        element={
+          isLoggedIn ? (
+            <Navigate to="/ducks" replace />
+          ) : (
+            <Navigate to="/login" replace />
+          )
+        }
+      />
     </Routes>
   );
 }
