@@ -8,7 +8,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import * as auth from "../utils/auth";
 import { setToken, getToken } from "../utils/token";
 import * as api from "../utils/api";
-import AppContext from '../contexts/AppContext';
+import AppContext from '../context/AppContext';
 import "./styles/App.css";
 
 function App() {
